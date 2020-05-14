@@ -1,0 +1,160 @@
+				TD Algorithmique
+
+
+Exercice 1:
+Algorithme Partie Division
+Variables 
+a,b,q,r,: entiers
+qr:réel
+Début
+
+	Écrire ("Enter la valeur de a : ")
+     	Lire (a) 
+	Écrire ("Enter la valeur de b : ")
+     	Lire (b) 
+	q  ←a div b
+	r  ← a%b
+	qr  ← a/b
+	Ecrire(“Quotient entier:”, q)
+	Ecrire(“Quotient réel:”, qr)
+	Ecrire(“Rester:”, r)
+Fin
+
+
+
+
+
+Exercice 4:
+Algorithme Puissance
+Version1:
+Variables 
+n: entier
+x : réel
+Début
+	Ecrire(‘Entrer la valeur de x’)
+	Lire(x)
+	Ecrire(‘Entrer la valeur de n’)
+	Lire(n)
+	Ecrire(‘le résultat de ’,x,’ à la puissance’,n ,‘ : ’, pow(x,n))
+Fin
+
+Version2:
+Variables 
+n,i: entiers
+x ,puis: réel
+Début
+	Ecrire(‘Entrer la valeur de x’)
+	Lire(x)
+	Ecrire(‘Entrer la valeur de n’)
+	Lire(n)
+	i ←1
+	puis ←1
+	Tant Que i<=n
+		puis ←puis*x
+		i←i+1
+	FinTantQue
+	Ecrire(‘le résultat de ’,x,’ à la puissance’,n ,‘ : ’, puis)
+Fin
+
+
+Exercice 5:
+
+Algorithme Somme
+Variables
+val, i, somme: entiers
+somme← 0
+Début
+ 	Pour i ← 1 à 5 Faire
+     		Écrire (‘ entrer valeur’)
+     		Lire (val)
+     		somme←  somme+val
+   	Fin Pour
+ 	Afficher somme
+Fin
+
+
+
+Exercice 7: 
+Algorithme décomposition
+Variables
+montant,reste,b20,b10,b5,p2,p1 , : Entiers
+Début
+      Ecrire ( "Entrer le montant à décomposer? " )
+      Lire ( montant)
+      b20 ← montant div 20
+      reste ← montant%20
+      b10 ← reste div 10
+      reste ← reste%10
+      b5 ← reste div 5
+      reste ← reste%5
+      p2 ← reste div 2
+      reste ← reste%2
+      p1 ← reste
+      Afficher ( “le montant “ , montant, “contient”,b20,”billets de 20”,b10,”billets de 10”,b5,”billets de 5”,p2”pièces de 2 et”,p1,”pièces de 1”)
+Fin
+
+
+
+
+Exercice 10:
+Algorithme Trier
+Procédure échanger(g : entier , e : entier) 
+Variables
+	f: entier
+Début
+	Ecrire (" Entrer Les valeurs G , F  : ")
+	Lire ( g,f )
+	f ← g
+	g ← e
+	e ← f
+fin
+Variables
+	a,b,c : entiers
+	tab[3] : Tableau  d’entier
+	i,j : entiers
+Début
+	Ecrire (" Entrer La valeur de A  : ")
+	Lire ( a)
+	tab[0]  ← a
+	Ecrire (" Entrer La valeur de B  : ")
+	Lire ( b)
+	tab[1]  ← b
+	Ecrire (" Entrer La valeur de C  : ")
+	Lire ( c)
+	tab[2]  ← c
+	Pour i ←0 à 1
+		Pour j ←i+1 à 2
+			Si tab[i] > tab[j] Alors
+				échanger(tab[j],tab[i])
+		FinPour
+	FinPour
+	Ecrire(‘les valeurs de A,B et C sont dans l’ordre ’ , a, b, c)
+
+	
+Fin
+
+
+Exercice 11
+Variables a,b :entiers
+          op  :chaine de caractère
+
+Début
+Afficher("Entrer une première valeur")
+  	lire(a)
+  	Afficher("Entrer l'opérateur")
+  	lire(op)
+  	Afficher("Entrer une deuxième valeur")
+ 	 lire(b)
+  	Selon op faire
+   		 '+' : Afficher("la somme des 2 valeurs est ", a+b)
+   		 '*' : Afficher("le produit des 2 valeurs est ", a*b)
+   		 '-' : Afficher("le résultat de ",a,"-","b","est : ", a-b)
+   		 '/' : si(b <> 0) alors
+            		Afficher("la division de ",a,"/",b,"=", a/b)
+            	    	sinon
+              			Afficher("erreur")
+          		FinSi
+    			sinon Afficher("l'opérateur saisi est incorrecte")
+ 	 FinSelon
+Fin
+
