@@ -4,8 +4,9 @@
 Exercice 1:
 Algorithme Partie Division
 Variables 
-a,b,q,r,: entiers
-qr:réel
+	a,b,q,r,: entiers
+	qr:réel
+
 Début
 
 	Écrire ("Enter la valeur de a : ")
@@ -21,6 +22,60 @@ Début
 Fin
 
 
+Exercice 2
+Algorithme Surface et Périmètre d'un cercle
+	Variables Rayon, Surface, Périmètre : Réels 
+	Constante Pi = 4 x atan (1)
+Début
+ 	Ecrire ("Donner le rayon du cercle : ")
+     	 Lire (Rayon) ;
+     	 Surface ← (Rayon x Rayon) * Pi
+     	 Périmètre ←Rayon * 2 * Pi
+    	 Ecrire ("La surface du cercle est : ", Surface)
+   	 Ecrire ("Le périmètre du cercle est : ", Périmètre
+Fin
+
+
+Exercice 3 :
+Algorithme calcul résistance
+Version 1 :
+Variables
+Rpar, Rser, r1, r2, r3 : réels 
+Début
+Écrire (‘entrer la valeur de r1 : ‘)
+      	Lire(r1)
+      	Écrire (‘ entrer la valeur de r2 : ’)
+      	Lire(r2)
+      	Écrire (‘ entrer la valeur de r3 : ’)
+      	Lire(r3)
+      	Rser← r1+r2+r3
+      	Rpar ← (r1*r2*r3) / (r1*r2+r1*r3+r2*r3)
+      	Écrire (‘ la résistance en série est : ‘, Rser)
+      	Écrire (‘ la résistance en parallèle est : ‘, Rpar)
+Fin
+
+Version 2 :
+Variables
+Rpar, Rser, r1, r2, r3 : réels 
+choix : entier
+Début
+Écrire (‘entrer la valeur de r1 : ‘)
+      	Lire(r1)
+      	Écrire (‘ entrer la valeur de r2 : ’)
+      	Lire(r2)
+      	Écrire (‘ entrer la valeur de r3 : ’)
+      	Lire(r3)
+      	Répéter
+	Écrire (‘entrer votre choix : ‘)
+      		Lire (choix)
+	Jusqu’à choix = 1 ou choix = 2
+	Si choix = 1 alors
+		Rser ← r1+r2+r3
+		Écrire (‘ la résistance en série est : ‘, Rser)
+	Sinon 
+		Rpar ← (r1*r2*r3) / (r1*r2+r1*r3+r2*r3)
+		Écrire (‘ la résistance en parallèle est : ‘, Rpar)
+	FinSi
 
 
 
@@ -61,8 +116,8 @@ Exercice 5:
 
 Algorithme Somme
 Variables
-val, i, somme: entiers
-somme← 0
+	val, i, somme: entiers
+	somme← 0
 Début
  	Pour i ← 1 à 5 Faire
      		Écrire (‘ entrer valeur’)
@@ -70,6 +125,27 @@ Début
      		somme←  somme+val
    	Fin Pour
  	Afficher somme
+Fin
+
+
+Exercice6 :
+Algorithme calcul distance
+	Variables
+	x1, x2, y1, y2, d , d1, d2, res : réels 
+Début
+	Ecrire (‘entrer la valeur de x1 : ‘) 
+       	Lire(x1) ;
+       	Ecrire (‘ entrer la valeur de y1 : ‘) 
+       	Lire(y1) 
+       	Ecrire (‘entrer la valeur de x2 : ‘) 
+       	Lire(x2) ;
+       	Ecrire (‘ entrer la valeur de y2 : ‘) 
+       	Lire(y2) 
+	d1 ← 2*(x2-x1)
+	d2 ← 2* (y1 – y2)
+	res ← d1 + d2
+       	d = sqrt(res) 
+       	Écrire ("La distance est : ", d) 
 Fin
 
 
@@ -93,6 +169,81 @@ Début
       Afficher ( “le montant “ , montant, “contient”,b20,”billets de 20”,b10,”billets de 10”,b5,”billets de 5”,p2”pièces de 2 et”,p1,”pièces de 1”)
 Fin
 
+
+Exercice 8
+Algorithme : Équation du second degré
+	variables a,b,c,d,x1,x2 :réels
+Début
+	Répéter
+   		 Afficher("Entrer les valeurs a,b et c ")
+    		lire(a,b,c)
+  	jusqu'à  a<>0 
+  	d ← b*b-4*a*c
+  	si(d>0) alors
+    		x1 ← (-b-sqrt(d))/2*a
+    		x2 ← (-b+sqrt(d))/2*a
+		Ecrire("les solutions sont : x1 et x2” ,x1,x2)
+	FinSi
+    	si(d<0) alors
+		Écrire(“Il n y a pas de solution”)
+  	FinSi
+
+  	si(d=0) alors
+    		x1  ←   -b/2*a
+   		 Ecrire("la solution est :",x1)
+  	FinSi
+Fin
+
+
+Exercice 9 :
+On considère que le départ et l'arrivé ont lieu le même jour 
+Algorithme Durée Vol 
+Variables
+	h1, h2, m1, m2 : Entiers
+	hd, md : Entiers
+Début
+	Ecrire (" entrer horaire de départ : h min")
+	Lire (h1, m1)
+	Ecrire (" entrer horaire d’arrivée : h min")
+	Lire (h2, m2)
+	md ← (h2*60+m2) – (h1*60+m1)
+	hd ← md div 60
+	md ← md % 60
+	Ecrire (" la durée de vol est : ", hd , ' : ', md)
+Fin
+
+On suppose que la durée de vol est inférieure à 24 heures mais peut avoir lieu le lendemain. 
+Algorithme DureeVol
+Variables
+	h1, h2, m1, m2 : Entiers
+	hd, md : Entiers
+Début
+	Ecrire (" entrer horaire de départ : h min") 
+	Lire (h1, m1)
+	Ecrire (" entrer horaire d’arrivée : h min") 
+	Lire (h2, m2) 
+	SI (h2 > h1) ALORS 
+		SI (m2 > m1) ALORS 
+			hd ← h2-h1 
+			md ← m2-m1 
+			Ecrire (hd, md)
+		SINON 
+			hd ← h2-h1-1 
+			md ← m2+60-m1 
+			Ecrire (hd, md) 
+		FINSI 
+	SINON 
+		SI (m2 > m1 ) ALORS 
+			hd ← h2-h1+24 
+			md ← m2-m1 
+			Ecrire (hd, md) 
+		SINON 
+			hd ← h2-h1+24-1 
+			md ← m2+60-m1 
+			Ecrire (hd, md)
+ 		FINSI 
+	FINSI
+Fin
 
 
 
@@ -157,4 +308,79 @@ Afficher("Entrer une première valeur")
     			sinon Afficher("l'opérateur saisi est incorrecte")
  	 FinSelon
 Fin
+
+
+Exercice 12
+Version1
+Variables val, som, i :entier
+Début
+Afficher("Saisir une valeur")
+  	lire(val)				
+  	som <- 0					
+  	Pour i <- 1 à val/2 faire           		
+    	Si(val mod i = 0) Alors			
+      		som <- som + i
+    	FinSi
+    	FinPour
+	Si(som = val) Alors
+       		Afficher("le nombre : ",val,"est parfait")
+	Sinon 
+		Afficher("le nombre : ",val," n’est parfait")
+	FinSi
+
+Fin
+
+
+Exercice 13:
+Variables j,m,a : entier
+Début
+	Répéter
+		Ecrire (" Entrer le jour  : ")
+		Lire ( j)
+		Ecrire (" Entrer le mois  : ")
+		Lire ( m)
+		Ecrire (" Entrer l'année  : ")
+		Lire ( a)
+ 	 jusqu'à((j>0 et j<=31) et (m>0 et m<=12) )
+  	SI(m = 2 et j > 29) alors
+    		Afficher("la date saisie est invalide")
+  	FinSi
+  	SI((m = 4 ou m = 6 ou m = 9 ou m = 11) et j>30) alors
+   		 Afficher("la date est invalide")
+    	SINON
+      		Afficher("la date : ",j,"/",m,"/",a," est valide")
+  	FinSi
+Fin
+
+
+
+
+Exercice 14:
+Algorithme année_bessextile;
+variables
+Variables j,m,a : entiers
+Début
+	Répéter
+		Ecrire (" Entrer le jour  : ")
+		Lire ( j)
+		Ecrire (" Entrer le mois  : ")
+		Lire ( m)
+		Ecrire (" Entrer l'année  : ")
+		Lire ( a)
+	jusqu'à((j>0 et j<=31) et (m>0 et m<=12) )
+  	SI(m = 2 et j > 29) alors
+    		Afficher("la date saisie est invalide")
+  	FinSi
+  	SI((m = 4 ou m = 6 ou m = 9 ou m = 11) et j>30) alors
+   		 Afficher("la date est invalide")
+    	SINON
+      		Afficher("la date : ",j,"/",m,"/",a," est valide")
+  	FinSi
+	SI ((a % 4 =0 et a % 100 <> 0) ou a % 400 =0 ) Alors
+		Ecrire(‘l’année que vous avez entré est bissextile.’)
+        Sinon
+        	Ecrire(‘l’année que vous avez entré n'est pas bissextile .’)
+    	Finsi
+Fin
+
 
