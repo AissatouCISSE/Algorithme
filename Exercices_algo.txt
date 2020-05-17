@@ -384,3 +384,103 @@ Début
 Fin
 
 
+Exercice 15 :
+Variables
+	 n, i : Entier
+	Somme<-0
+Début
+	Ecrire "Entrez un nombre : "
+     	Lire n
+     	Pour i ← 1 à n
+     		Somme<-Somme+i
+  	Fin Pour
+     	Écrire ("La somme est : ", Somme)
+     	Écrire ("La moyenne est : ", Somme/n)
+Fin
+
+
+Exercice 16:
+Algorithme Division soustractions successives
+Variables
+A,B,R: entiers
+Q : reel
+R←A
+Q←0
+Début
+	Écrire ("Entrer la valeur de A : ")
+        Lire (A)
+        Écrire ("Enter la valeur de B : ")
+        Lire (B)
+    	Tant que R ≥ B Faire
+        	R ←R - B
+        	Q← Q+1
+    	Fin Tant que
+       	Ecrire(“Quotient est:”, Q)
+       	Ecrire(“Reste est:”, R)
+Fin
+
+
+Exercice 17 :
+Algorithme PGCD
+Variables
+	a, b, c, resu, pgcd : entiers
+	e, d : entiers
+Début
+	Répéter
+		Ecrire (" entrer la valeur de a ") 
+		Lire (a)
+		Ecrire (" entrer la valeur de b") 
+		Lire (b) 
+	Jusqu’à a>=0 ET b>=0
+	e ← a
+	d ← b
+	pgcd  ← 0
+	resu ← 0
+	TantQue (a<>b)
+		SI(b>a) Alors
+			c←a
+			a←b
+			b←c
+		FinSi
+		resu ← a-b
+		a ←b
+		b ← resu
+		pgcd ← a
+	FinTantQue
+	Ecrire("le pgcd de", e ," et ", d ," est : ", pgcd)
+Fin
+
+
+Exercice 17 :
+Algorithme PGCD
+Variables
+	a, b, c, resu, pgcd : entiers
+	e, d : entiers
+Début
+	Répéter
+		Ecrire (" entrer la valeur de a ") 
+		Lire (a)
+		Ecrire (" entrer la valeur de b") 
+		Lire (b) 
+	Jusqu’à a>=0 ET b>=0
+	e ← a
+	d ← b
+	pgcd  ← 0
+	resu ← 0
+	TantQue (a<>b)
+		SI(b>a) Alors
+			c←a
+			a←b
+			b←c
+		FinSi
+		resu ← a-b
+		a ←b
+		b ← resu
+		pgcd ← a
+	FinTantQue
+	Ecrire("le pgcd de", e ," et ", d ," est : ", pgcd)
+	ppcm ← e*d/pgcd
+        Ecrire ("le ppcm de", e ," et ", d ," est : ", ppcm)
+
+Fin
+
