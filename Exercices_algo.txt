@@ -32,7 +32,7 @@ Début
      	 Surface ← (Rayon x Rayon) * Pi
      	 Périmètre ←Rayon * 2 * Pi
     	 Ecrire ("La surface du cercle est : ", Surface)
-   	 Ecrire ("Le périmètre du cercle est : ", Périmètre
+   	 Ecrire ("Le périmètre du cercle est : ", Périmètre)
 Fin
 
 
@@ -451,8 +451,8 @@ Début
 Fin
 
 
-Exercice 17 :
-Algorithme PGCD
+Exercice 18 :
+Algorithme PPCM
 Variables
 	a, b, c, resu, pgcd : entiers
 	e, d : entiers
@@ -484,3 +484,98 @@ Début
 
 Fin
 
+
+
+
+
+Exercice 19 : 
+Algorithme Somme Prix 
+Variables somme, prix, rep : Entier
+Début 
+	somme ← 0
+	Répéter
+       		Ecrire ("Entrer Le prix de l’article") 
+       		Lire (prix)
+       		Ecrire ("Voulez vous saisir un autre article ? tapez 0 pour terminer") 
+		lire(rep)
+		somme ← somme + prix
+	jusqu'à(somme >= 0 ET rep <> 0)
+       	Ecrire ("La somme des articles est :",somme,”CFA”) 
+Fin
+
+Exercice 20 :
+Algorithme Maximum
+Variables
+	n, pos, max : entiers
+	tab[10] : Tableau d’entier
+	i , j : entiers
+Début
+     	Pour i ← 0 à 9
+     	Ecrire(‘Entrer une valeur n ’)
+     	Lire(n)  
+	tab[i] ← n
+	FinPour
+	pos ← 0
+	max ← 0
+	Pour i ← 0 à 8
+        	Pour j ←i+1 à 9
+                    	Si tab[i] > tab[j] Alors
+                               	pos ←j
+                               	Max ← tab[i]
+        	FinPour
+		j ← 9
+	FinPour
+	Ecrire(‘le plus grand de ces 10 nombres est ’, max, ‘ et il a été saisi à la position : ’, pos)
+Fin
+
+
+Exercice 21 :
+Algorithme Devinette
+Variables 
+	a, b: entiers
+Début
+	
+	Ecrire (‘entrez l’entier du premier utilisateur’)
+     	Lire(a)
+	Ecrire (‘entrez l’entier du deuxième utilisateur’)
+     	Lire (b)
+     	Répéter
+               	Si (a<>b)
+               	      	Si (a>b) Alors
+				Ecrire (‘la valeur entrée est plus petite que la valeur entrée par le premier utilisateur’)
+               	      	Sinon
+				Ecrire (‘la valeur entrée est plus grande que la valeur entrée par le premier utilisateur’)
+                        FinSi
+			Ecrire(‘Entrez la valeur de b’)
+			Lire(b)
+               	Sinon
+			Ecrire (‘Bravo ! vous avez deviné la valeur entrée par le premier utilisateur’)
+
+               	FinSi
+	Jusqu’à  a = b
+
+			
+Fin
+
+
+Exercice 24:
+Variables 
+	n,a,t :entiers
+Début
+	Afficher("saisir un nombre")
+  	lire(n)
+  	Afficher("devine le nombre")
+  	lire(a)
+  	t ←1
+  	TantQue(a <> n) faire
+  		Si (a>n) Alors
+      			Afficher("plus grand")
+  		Sinon 
+      			Afficher("plus petit")
+  		FinSi
+  		t ← t+1
+ 	 	Afficher("devine le nombre ",t," eme tentative")
+ 	 	Lire(a)
+  	FinTantQue
+ 	Afficher("Bravo vous avez gagné")
+Fin
